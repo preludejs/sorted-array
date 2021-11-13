@@ -1,10 +1,10 @@
 import type SortedArray from './sorted-array.js'
-import type { Cmp1 } from '@prelude/cmp'
+import type { CmpA } from '@prelude/cmp'
 import findIndex from './find-index.js'
 
 export const find =
-  <T, K>(self: SortedArray<T, K>, cmp1: Cmp1<K>): undefined | T => {
-    const index = findIndex(self, cmp1)
+  <T, K>(self: SortedArray<T, K>, cmpA: CmpA<K>): undefined | T => {
+    const index = findIndex(self, cmpA)
     return index < 0 ?
       undefined :
       self.values[index]
