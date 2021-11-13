@@ -1,6 +1,6 @@
 {
   "name": "@prelude/sorted-array",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sorted array module.",
   "type": "module",
   "main": "./cjs/index.js",
