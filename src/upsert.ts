@@ -11,7 +11,7 @@ const upsert =
     } else {
       const value_ = merge(self.values[i], value)
       const key_ = self.keyOfValue(value_)
-      if (self.cmp(key, key_) !== Cmp.equal) {
+      if (self.cmp(key, key_) !== Cmp.eq) {
         throw new Error('Key modification on merge.')
       }
       self.values[i] = value_

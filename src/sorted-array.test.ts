@@ -1,4 +1,4 @@
-import * as A from '../cjs/index.js'
+import * as A from './index.js'
 
 test('numbers', () => {
   const xs = A.numbers()
@@ -16,6 +16,6 @@ test('strings', () => {
   expect(xs.values).toEqual([ 'bar', 'baz', 'foo' ])
   expect(A.hasValue(xs, 'foo')).toBe(true)
   expect(A.hasKey(xs, 'bar')).toBe(true)
-  expect(A.has(xs, _ => A.Cmp.strings(_, 'baz'))).toBe(true)
+  expect(A.has(xs, _ => A.Cmp.string(_, 'baz'))).toBe(true)
   expect(A.hasValue(xs, 'zig')).toBe(false)
 })
